@@ -1,5 +1,27 @@
 {
+  "name": "ssql",
+  "version": "0.0.1",
+  "description": "Tool for matching strings",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
   "devDependencies": {
-    "chai": "^4.2.0"
-  }
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/r-pr/ssql.git"
+  },
+  "keywords": [
+    "match"
+  ],
+  "author": "r-pr",
+  "license": "WTFPL",
+  "homepage": "https://github.com/r-pr/ssql"
 }
