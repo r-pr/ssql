@@ -19,7 +19,7 @@ _expression_:<br>
 # Usage
 
 ```
-const ssql = require('ssql');
+const ssql = require('real-ssql');
 
 let query = ssql.parse('(hello  OR  world) AND (bar OR baz)');
 ssql.match(query, 'world'));            //false;
