@@ -22,12 +22,24 @@ _expression_:<br>
 const ssql = require('real-ssql');
 
 let query = ssql.parse('(hello  OR  world) AND (bar OR baz)');
-ssql.match(query, 'world'));            //false;
-ssql.match(query, 'hello'));            //false;
-ssql.match(query, 'hello world'));      //false;
-ssql.match(query, 'world hello'));      //false;
-ssql.match(query, 'world bar hello'));  //true;
-ssql.match(query, 'world baz'));        //true;
-ssql.match(query, 'hello baz'));        //true;
-ssql.match(query, 'hello bar'));        //true;
+ssql.match(query, 'world');            //false
+ssql.match(query, 'hello');            //false
+ssql.match(query, 'hello world');      //false
+ssql.match(query, 'world hello');      //false
+ssql.match(query, 'world bar hello');  //true
+ssql.match(query, 'world baz');        //true
+ssql.match(query, 'hello baz');        //true
+ssql.match(query, 'hello bar');        //true
+```
+
+Also you can specify your own representation of operators:
+
+```
+let query = parse('(hello  или  world) и (bar или baz)', {
+    and: 'и',
+    or: 'или',
+    not: 'не'
+});
+ssql.match(query, 'hello world');   //false
+ssql.match(query, 'world baz');     //true
 ```
