@@ -78,4 +78,14 @@ describe('match', function() {
         expect(match(node, 'bar hello')).to.be.true;
         expect(match(node, 'hello world baz')).to.be.false;
     });
+    it ('match "нет и да"', function(){
+        let node = parse('нет и да', opts);
+        expect(match(node, 'нет')).to.be.false;
+        expect(match(node, 'да')).to.be.false;
+        expect(match(node, 'да нет')).to.be.true;
+    });
+    it ('match digits', function(){
+        let node = parse('8', opts);
+        expect(match(node, '№8888 НІОКР testtttttttttttttt')).to.be.true;
+    });
 });

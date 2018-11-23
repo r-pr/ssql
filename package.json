@@ -1,6 +1,6 @@
 {
   "name": "real-ssql",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Tool for matching strings",
   "main": "index.js",
   "directories": {
