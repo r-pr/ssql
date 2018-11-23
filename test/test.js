@@ -1,6 +1,6 @@
 const expect = require('chai').expect;
 
-const { parse } = require('../parser');
+const { parse } = require('../index');
 
 describe('parser', function() {
     it ('fails', function(){

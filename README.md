@@ -43,3 +43,11 @@ let query = parse('(hello  или  world) и (bar или baz)', {
 ssql.match(query, 'hello world');   //false
 ssql.match(query, 'world baz');     //true
 ```
+
+# ES5 version
+
+This may be needed, for example, in a project created with `react-create-app`.
+
+```
+import ssql from 'real-ssql/es5';
+```

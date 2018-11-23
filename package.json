@@ -1,6 +1,6 @@
 {
   "name": "real-ssql",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Tool for matching strings",
   "main": "index.js",
   "directories": {
@@ -8,11 +8,17 @@
     "test": "test"
   },
   "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "babel-loader": "^8.0.4",
     "chai": "^4.2.0",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "webpack": "^3.0.0"
   },
   "scripts": {
-    "test": "mocha test"
+    "test": "mocha test",
+    "to_es_5": "webpack --config=webpack.config.js",
+    "prepare": "npm run test && npm run to_es_5"
   },
   "repository": {
     "type": "git",
